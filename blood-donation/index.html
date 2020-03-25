@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe sangue! Doe vidas!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img class="logo" src="logo.png" alt="Imagem de doe">
+        <h2>A sua doação importa</h2>
+        <p>Até 3 vidas com uma doação.</p>
+        <p>Mais de 38.000 doações são necessárias todos os dias.</p>
+        <p>Apenas 1,9% da população brasileira doa sangue.</p>
+
+        <button>Quero doar</button>
+
+    </header>
+
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form method="POST" action="/">
+            <input type="text" name="name" placeholder="Nome completo">
+            <input type="email" name="email" placeholder="Insira seu email">
+            <input type="text" name="blood" placeholder="Tipo sanguineo">
+            <button>Quero ajudar</button>
+        </form>
+    </section>
+
+    <main>
+
+        <h2>Útimos <span>doadores</span></h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+
+                <div class="donor">
+                    <div class="bload"> {{donor.blood}} </div>
+                    <p> {{donor.name}} </p>
+                </div>
+
+            {% endfor %}
+
+            <!-- <div class="donor">
+                <div class="bload">B+</div>
+                <p>Maria de lurdes</p>
+            </div>
+
+            <div class="donor">
+                <div class="bload">A+</div>
+                <p>Oséias silva</p>
+            </div>
+
+            <div class="donor">
+                <div class="bload">O+</div>
+                <p>Lidiane lima</p>
+            </div> -->
+
+        </section>
+
+    </main>
+
+    <footer>Com 💝 &copy; Izael silva ❤️</footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
