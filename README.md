@@ -1,6 +1,3 @@
-![GitHub](https://img.shields.io/github/license/Ias4g/blood-donation)
-
-
 ![Optional Text](./public/logo.png)
 
 # blood-donation
