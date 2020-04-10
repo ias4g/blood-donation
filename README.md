@@ -2,7 +2,7 @@
 # blood-donation
 Um site de exemplo para doar sangue feito em JavaScript, Express, Nodemon, Nunjucks e Postgres
 
-<img src="blood-index-01.png"
+<img src="./img/blood-index-01.png"
     alt="Markdown index.html"
     style="float: left; margin-right: 10px;" />
 
