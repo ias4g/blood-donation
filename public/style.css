@@ -132,8 +132,12 @@ main section.donors {
 
 .donor p{
     margin-top: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     font-size: 14px;
+}
+
+.donor i{
+    font-size: 8px;
 }
 
 footer {

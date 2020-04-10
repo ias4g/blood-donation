@@ -25,61 +25,63 @@ nunjucks.configure("./", {
     noCache: true
 })
 
-// Lista de doadores, vetor -> Array
-// const donors = [
-//     {
-//         name: "Izael silva",
-//         blood: "A+"
-//     },
-//     {
-//         name: "Oséias silva",
-//         blood: "A-"
-//     },
-//     {
-//         name: "Lurdes silva",
-//         blood: "B+"
-//     },
-//     {
-//         name: "Socorro lima",
-//         blood: "B-"
-//     },
-//     {
-//         name: "Bonária silva",
-//         blood: "AB+"
-//     },
-//     {
-//         name: "Rúbia silva",
-//         blood: "AB-"
-//     },
-//     {
-//         name: "Jardson silva",
-//         blood: "O+"
-//     },
-//     {
-//         name: "Adelmo silva",
-//         blood: "O-"
-//     }
-// ]
 
 //Configurando a apresentação da página
 server.get("/", function(req, res){
 
-    const query = "SELECT * FROM donors ORDER BY name"
+    const query = "SELECT * FROM donors"
+
 
     db.query(query, function(err, result){
-        if (err) return res.send("Erro ao fazer consulta no BD.")
+        if (err) return res.send("Erro ao fazer consulta no BD")
 
-        const donors = result.rows
-        return res.render("index.html", { donors })
+        const reverse = result.rows
+        
+        const reverseDonors = [...reverse].reverse()
+
+        let lastDonors = []
+        for(let donors of reverseDonors){
+            if(lastDonors.length < 4){
+                lastDonors.push(donors)
+            }
+        }
+
+        return res.render("index.html", { donors: lastDonors })
     })
 
 })
 
 server.post("/", function(req, res){
+
+    //Pegando a hora atual do sistema
+    const dt = new Date()
+
+    const d = dt.getDate()
+    const m = dt.getMonth()
+    const yyyy = dt.getFullYear()
+
+    const days = d < 10 ? `0${d}`:d
+    const moths = m < 10 ? `0${m}`:m
+    const fullDate = `${days}/${moths}/${yyyy}`
+
+    //--------------------------------------------------------
+
+    const hs = dt.getHours()
+    const mm = dt.getMinutes()
+    const ss = dt.getSeconds()
+
+    const hours = hs < 10 ? `0${hs}`:hs
+    const minutes = mm < 10 ? `0${mm}`:mm
+    const seconds = ss < 10 ? `0${ss}`:ss
+    const fullHours = `${hours}:${minutes}:${seconds}`
+
+    
+
     //Pegando os dados do formulário
     const name = req.body.name
     const email = req.body.email
     const blood = req.body.blood
+    const created = `${fullDate} às ${fullHours}`
 
     // Colocando os valors dentro do array
     // donors.push({
@@ -93,10 +95,10 @@ server.post("/", function(req, res){
 
     //Colocando os dados dentro do DB
     const query = `
-        INSERT INTO donors ("name", "email", "blood")
-        VALUES ($1, $2, $3)`
+        INSERT INTO donors ("name", "email", "blood", "createdAt")
+        VALUES ($1, $2, $3, $4)`
 
-    const values = [name, email, blood]
+    const values = [name, email, blood, created]
 
     db.query(query, values, function(err){
 
