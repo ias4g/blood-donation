@@ -1,7 +1,25 @@
 
 # blood-donation
-Um site de exemplo para doar sangue feito em JavaScript, Express, Nodemon, Nunjucks e Postgres
 
+Blood donation is a website I made, using JavaScript and NodeJS, I really like JS and when I have free time I do something like that.
+
+* ### Tecnologias ultilizadas!
+  * ##### JavaScript :vulcan_salute
+  * ##### Express
+  * ##### Nodemon
+  * ##### Nunjucks
+  * ##### Banco Postgres
+
+### Página inicial
+![blood-index-01](https://user-images.githubusercontent.com/62667424/79022390-2c5d4200-7b54-11ea-8544-c7807f4f7180.PNG)
+
+#### Ai clicar no botão, surgirá este formulário
+![blood-index-03](https://user-images.githubusercontent.com/62667424/79022388-2c5d4200-7b54-11ea-9acd-602061bf6eb4.PNG)
+
+##### Aqui é mostrado os ultimos doadores
+![blood-index-02](https://user-images.githubusercontent.com/62667424/79022386-2b2c1500-7b54-11ea-867e-be4f27a2a0af.PNG)
+
+##### Informações extras
 ![GitHub](https://img.shields.io/github/license/Ias4g/blood-donation)
 ![GitHub language count](https://img.shields.io/github/languages/count/Ias4g/blood-donation)
 ![GitHub top language](https://img.shields.io/github/languages/top/Ias4g/blood-donation)
