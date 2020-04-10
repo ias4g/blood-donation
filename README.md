@@ -6,7 +6,7 @@ Um site de exemplo para doar sangue feito em JavaScript, Express, Nodemon, Nunju
     alt="Markdown index.html"
     style="float: left; margin-right: 10px;" />
 
-![GitHub](img/blood-index-01.png)
+![](img/blood-index-01.png)
 
 ![GitHub](https://img.shields.io/github/license/Ias4g/blood-donation)
 ![GitHub language count](https://img.shields.io/github/languages/count/Ias4g/blood-donation)
