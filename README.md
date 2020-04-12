@@ -4,8 +4,6 @@
   <b>Blood-donation</b>
 </p>
 
-# blood-donation
-
 <p align="center">
   Blood donation is a website I made, using JavaScript and NodeJS, I really like JS and when I have free time I do something like that.
 </p>
