@@ -1,7 +1,14 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/62667424/79057631-c0550980-7c39-11ea-8994-c615441883f4.png"><br>
   <br><br><br><br>
-  <b>Blood-donation</b>
+  <h2>Blood-donation</h2>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/Ias4g/blood-donation">
+  <img src="https://img.shields.io/github/languages/count/Ias4g/blood-donation">
+  <img src="https://img.shields.io/github/languages/top/Ias4g/blood-donation">
+  <img src="https://img.shields.io/github/repo-size/Ias4g/blood-donation">
 </p>
 
 <p align="center">
@@ -28,13 +35,4 @@
 <h3 align="center">Here is shown the latest donors</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/62667424/79022386-2b2c1500-7b54-11ea-867e-be4f27a2a0af.PNG">
-</p>
-
-<h3 align="center">Additional Information</h3>
-
-<p align="center">
-  <img src="https://img.shields.io/github/license/Ias4g/blood-donation">
-  <img src="https://img.shields.io/github/languages/count/Ias4g/blood-donation">
-  <img src="https://img.shields.io/github/languages/top/Ias4g/blood-donation">
-  <img src="https://img.shields.io/github/repo-size/Ias4g/blood-donation">
 </p>
