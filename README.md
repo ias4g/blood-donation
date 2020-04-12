@@ -13,19 +13,12 @@
   Blood donation is a website I made, using JavaScript and NodeJS, I really like JS and when I have free time I do something like that.
 </p>
 
-* ### Technologies used.
-  * ##### JavaScript
-  * ##### Express
-  * ##### Nodemon
-  * ##### Nunjucks
-  * ##### Banco Postgres
-  
-  <h3 align="center">Technologies used.</h3>
-  <h5 align="center">JavaScript</h5>
-  <h5 align="center">Express</h5>
-  <h5 align="center">Nodemon</h5>
-  <h5 align="center">Nunjucks</h5>
-  <h5 align="center">Banco Postgres</h5>
+<h3 align="center">Technologies used.</h3>
+<h5 align="center">JavaScript</h5>
+<h5 align="center">Express</h5>
+<h5 align="center">Nodemon</h5>
+<h5 align="center">Nunjucks</h5>
+<h5 align="center">Banco Postgres</h5>
 
 <h3 align="center">Home page</h3>
 <p align="center">
