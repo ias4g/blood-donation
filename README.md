@@ -18,17 +18,17 @@
 <h5 align="center">Express</h5>
 <h5 align="center">Nodemon</h5>
 <h5 align="center">Nunjucks</h5>
-<h5 align="center">Banco Postgres</h5>
+<h5 align="center">Banco Postgres</h5><br><br>
 
 <h3 align="center">Home page</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/62667424/79022390-2c5d4200-7b54-11ea-8544-c7807f4f7180.PNG">
-</p>
+</p><br><br>
 
 <h3 align="center">When clicking on the button, this form will appear</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/62667424/79022388-2c5d4200-7b54-11ea-9acd-602061bf6eb4.PNG">
-</p>
+</p><br><br>
 
 <h3 align="center">Here is shown the latest donors</h3>
 <p align="center">
