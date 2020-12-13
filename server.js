@@ -113,5 +113,5 @@ server.post("/", function(req, res){
 
 //ligando o servidor e permitindo o acesso à porta 3000
 server.listen(3000, function(){
-    console.log("Servidor rodando... na porta 3000 : http://127.0.0.1:3000")
+    console.log("Servidor rodando... na porta 3000 : http://localhost:3000")
 })
