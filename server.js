@@ -12,10 +12,10 @@ server.use(express.urlencoded({ extended: true }))
 const Pool = require('pg').Pool
 const db = new Pool({
     user: 'postgres',
-    password: '2046',
+    password: 'postgres',
     host: 'localhost',
     port: 5432,
-    database: 'doe'
+    database: 'donations'
 })
 
 //Configurando o template engine
@@ -27,21 +27,21 @@ nunjucks.configure("./", {
 
 
 //Configurando a apresentação da página
-server.get("/", function(req, res){
+server.get("/", function (req, res) {
 
     const query = "SELECT * FROM donors"
 
 
-    db.query(query, function(err, result){
+    db.query(query, function (err, result) {
         if (err) return res.send("Erro ao fazer consulta no BD")
 
         const reverse = result.rows
-        
+
         const reverseDonors = [...reverse].reverse()
 
         let lastDonors = []
-        for(let donors of reverseDonors){
-            if(lastDonors.length < 4){
+        for (let donors of reverseDonors) {
+            if (lastDonors.length < 4) {
                 lastDonors.push(donors)
             }
         }
@@ -51,7 +51,7 @@ server.get("/", function(req, res){
 
 })
 
-server.post("/", function(req, res){
+server.post("/", function (req, res) {
 
     //Pegando a hora atual do sistema
     const dt = new Date()
@@ -60,8 +60,8 @@ server.post("/", function(req, res){
     const m = dt.getMonth()
     const yyyy = dt.getFullYear()
 
-    const days = d < 10 ? `0${d}`:d
-    const moths = m < 10 ? `0${m}`:m
+    const days = d < 10 ? `0${d}` : d
+    const moths = m < 10 ? `0${m}` : m
     const fullDate = `${days}/${moths}/${yyyy}`
 
     //--------------------------------------------------------
@@ -70,12 +70,12 @@ server.post("/", function(req, res){
     const mm = dt.getMinutes()
     const ss = dt.getSeconds()
 
-    const hours = hs < 10 ? `0${hs}`:hs
-    const minutes = mm < 10 ? `0${mm}`:mm
-    const seconds = ss < 10 ? `0${ss}`:ss
+    const hours = hs < 10 ? `0${hs}` : hs
+    const minutes = mm < 10 ? `0${mm}` : mm
+    const seconds = ss < 10 ? `0${ss}` : ss
     const fullHours = `${hours}:${minutes}:${seconds}`
 
-    
+
 
     //Pegando os dados do formulário
     const name = req.body.name
@@ -89,7 +89,7 @@ server.post("/", function(req, res){
     //     blood
     // })
 
-    if(name === "" || email === "" || blood === ""){
+    if (name === "" || email === "" || blood === "") {
         return res.send("Todas os campos são obrigatórios!!")
     }
 
@@ -100,7 +100,7 @@ server.post("/", function(req, res){
 
     const values = [name, email, blood, created]
 
-    db.query(query, values, function(err){
+    db.query(query, values, function (err) {
 
         //Fluxo de erro
         if (err) return res.send("Erro no BD.")
@@ -108,10 +108,10 @@ server.post("/", function(req, res){
         //Fluxo normal
         return res.redirect("/")
     })
- 
+
 })
 
 //ligando o servidor e permitindo o acesso à porta 3000
-server.listen(3000, function(){
+server.listen(3000, (req, res) => {
     console.log("Servidor rodando... na porta 3000 : http://localhost:3000")
 })
